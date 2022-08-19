@@ -82,12 +82,14 @@ class _HomePageState extends State<HomePage>{
                       SizedBox(height: 30,),
                      GestureDetector(
                        onTap: () {
+
                          Navigator.push(
                            context,
                            MaterialPageRoute(
                                builder: (context) => const VideoInfo()),
                          );
                        },
+
                       child: Container(
                         height: 50,
                         margin: EdgeInsets.symmetric(horizontal: 40),
@@ -95,16 +97,27 @@ class _HomePageState extends State<HomePage>{
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white
                         ),
-                        child:Center(child:Text("Let's Start", style: TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),),
-                        ),
+                        child:Material(
+                          color: Colors.transparent,
+                          child:InkWell(
+                            borderRadius: BorderRadius.circular(20),
+                        child:Center(
+                          child:Text("Let's Start", style: TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),),
+                        ),splashColor: Colors.black.withOpacity(0.9),
+
                       ),
                      ),
+                      ),
+                     ),
+
                       SizedBox(height: 30,),
                     ],
                   ),
                 ),
               ),
+
               SizedBox(height: 20,),
+
               Expanded(child: GridView.count(
                 crossAxisCount:2,
                 padding: EdgeInsets.all(0),
@@ -113,7 +126,20 @@ class _HomePageState extends State<HomePage>{
                 children:_listItem.map((item) => Card(
                   color: Colors.transparent,
                   elevation: 0,
-                  child: Container(
+                   child: Material(
+                     color: Colors.transparent,
+                    child:InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VideoInfo()),
+                        );
+                      },
+                      splashColor: Colors.white.withOpacity(0.9),
+                      child: Container(
+                         child:Ink(
                         decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
@@ -133,6 +159,9 @@ class _HomePageState extends State<HomePage>{
                       ),
                     ),
                   ),
+                ),
+                    ),
+                    ),
                 )).toList(),
 
               )),
