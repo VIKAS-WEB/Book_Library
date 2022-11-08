@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 Color primaryGreen = Color(0xff416d6d);
 
@@ -14,18 +14,20 @@ List<Map> categories = [
   {'name': 'Documentries', 'iconPath': 'images/nvv.png'},
   {'name': 'Science', 'iconPath': 'images/martian.png'},
 
-
 ];
+
 List<Map> drawerItems=[
 
   {
     'icon':  Icons.home,
     'title' : 'Home'
   },
+
   {
     'icon': Icons.note_alt,
     'title' : 'Notes'
   },
+
   {
     'icon': Icons.download,
     'title' : 'Downloads'

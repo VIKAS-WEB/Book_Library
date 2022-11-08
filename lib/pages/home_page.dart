@@ -49,11 +49,11 @@ class _HomePageState extends State<HomePage> {
                                 colors: [
                               Colors.black.withOpacity(0.65),
                               Colors.black.withOpacity(0),
-                            ],
+                              ],
                                 end: Alignment.topCenter,
                                 begin: Alignment.bottomCenter)),
-                      ),
-                      Container(
+                        ),
+                        Container(
                         height: 430,
                         width: size.width,
                         child: Column(
@@ -173,8 +173,8 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
-                        ),
-                      ),
+                         ),
+                       ),
                       SizedBox(
                         height: 15,
                       ),
@@ -311,29 +311,29 @@ class _HomePageState extends State<HomePage> {
               )),
           Container(
               child: SafeArea(
-            child: Column(
+              child: Column(
               children: [
-                Row(
+                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                        Padding(
                         padding: const EdgeInsets.only(left: 10, top: 5),
                         child: Image.asset(
                           "assets/images/Klogo.png",
                           width: 45,
                           fit: BoxFit.cover,
-                        )),
-                    Row(
-                      children: [
+                         )),
+                        Row(
+                        children: [
                         IconButton(
-                            icon: Icon(
+                              icon: Icon(
                               Icons.notifications,
                               color: Colors.white,
                               //color: color.AppColor.logocolor,
                               size: 35,
                             ),
                             onPressed: null),
-                        IconButton(
+                            IconButton(
                             icon: Image.asset(
                               "assets/images/profile.jpeg",
                               width: 35,

@@ -47,15 +47,15 @@ class _DownloadPageState extends State<DownloadPage> {
   }
 
   Widget getBody() {
-    return Column(
+      return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
+          Container(
           height: 50,
           decoration: BoxDecoration(color: Colors.grey.withOpacity(0.2)),
           child: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Row(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Row(
               children: [
                 Icon(Icons.info_outline,color: Colors.white,),
                 SizedBox(
@@ -82,7 +82,7 @@ class _DownloadPageState extends State<DownloadPage> {
         ),
         Column(
           children: [
-            Container(
+              Container(
               width: 150,
               height: 150,
               decoration: BoxDecoration(

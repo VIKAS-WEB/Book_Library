@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:book_library/pages/Modules/AlchemyOffer.dart';
+import 'package:book_library/pages/Modules/DreamTeam.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,24 +12,29 @@ class VideoInfo extends StatefulWidget {
 
   @override
   _VideoInfoState createState() => _VideoInfoState();
+
 }
 
 class _VideoInfoState extends State<VideoInfo> {
+  List<String>items = ['Welcome','Alchamy Offer','Dream Team','Webinar + Emails','TechFunnel','Content'];
+  String? selectedItem= 'Welcome';
   List videoInfo = [];
   bool _playArea=false;
   bool _isPlaying=false;
   bool _disposed=false;
-  late VideoPlayerController _controller;
 
-  _initData() async {
+  late VideoPlayerController _controller;
+    _initData() async {
     await DefaultAssetBundle.of(context)
-        .loadString("json/videoinfo.json")
-        .then((value) {
-      setState(() {
-        videoInfo = json.decode(value);
-      });
-    });
-  }
+          .loadString("json/videoinfo.json")
+          .then((value) {
+          setState(() {
+          videoInfo = json.decode(value);
+        }
+       );
+      }
+     );
+    }
 
   @override
   void initState() {
@@ -39,29 +46,30 @@ class _VideoInfoState extends State<VideoInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: _playArea==false?BoxDecoration(
+          body: Container(
+          decoration: _playArea==false?BoxDecoration(
           gradient: LinearGradient(
-        colors: [
+          colors: [
           color.AppColor.gradientFirst.withOpacity(0.9),
           color.AppColor.gradientSecond
-        ],
-        begin: const FractionalOffset(0.0, 0.4),
-        end: Alignment.topRight,
-      )):BoxDecoration(
-        color: color.AppColor.gradientSecond,
-      ),
-      child: Column(
-        children: [
-          _playArea==false?Container(
+          ],
+          begin: const FractionalOffset(0.0, 0.4),
+          end: Alignment.topRight,
+          ),
+          ) :BoxDecoration(
+              color: color.AppColor.gradientSecond,
+          ),
+           child: Column(
+              children: [
+              _playArea==false?Container(
               padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
               width: MediaQuery.of(context).size.width,
               height: 300,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                   Row(
-                    children: [
+                      children: [
                       InkWell(
                           onTap: () {
                           Navigator.pop(context);
@@ -72,40 +80,47 @@ class _VideoInfoState extends State<VideoInfo> {
                       ),
                       Expanded(child: Container()),
                       Icon(Icons.info_outline,
-                          size: 20, color: color.AppColor.secondPageIconColor),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    "Course Details",
-                    style: TextStyle(
+                            size: 20, color: color.AppColor.secondPageIconColor),
+                      ],
+                     ),
+                     SizedBox(
+                     height: 30,
+                     ),
+                     Text(
+                        "Course Details",
+                        style: TextStyle(
                         fontSize: 25,
                         color: color.AppColor.secondPageTitleColor),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    "and Modules",
-                    style: TextStyle(
+                     ),
+                     SizedBox(
+                     height: 5,
+                     ),
+                     Text(
+                        "and Modules",
+                        style: TextStyle(
                         fontSize: 25,
                         color: color.AppColor.secondPageTitleColor),
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                     ),
+                       SizedBox(
+                       height: 50,
+                     ),
+                     SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                       children: [
-                        Container(
-                          width: 90,
+                        InkWell(
+                        onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Alchemy()),
+                        );
+                        },
+                          child: Container(
+                          width: 200,
                           height: 30,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(
+                                borderRadius: BorderRadius.circular(10),
+                                gradient: LinearGradient(
                                 colors: [
                                   color.AppColor
                                       .secondPageContainerGradient1stColor,
@@ -114,12 +129,99 @@ class _VideoInfoState extends State<VideoInfo> {
                                 ],
                                 begin: Alignment.bottomLeft,
                                 end: Alignment.topRight,
-                              )),
+                              ),
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.timer,
+                                Icon(
+                                Icons.shopping_bag,
+                                size: 20,
+                                color: color.AppColor.secondPageIconColor,
+                               ),
+                               SizedBox(
+                                width: 5,
+                               ),
+                              Text(
+                                    "Alchemy Offer",
+                                    style: TextStyle(
+                                    fontSize: 16,
+                                    color: color.AppColor.secondPageIconColor),
+                               ),
+                              ],
+                             ),
+                            ),
+                          ),
+                         SizedBox(
+                          width: 20,
+                         ),
+                         Container(
+                           width: 250,
+                           height: 30,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                gradient: LinearGradient(
+                                colors: [
+                                  color.AppColor
+                                      .secondPageContainerGradient1stColor,
+                                  color.AppColor
+                                      .secondPageContainerGradient2ndColor
+                                ],
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                              ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                                Icon(
+                                Icons.group,
+                                size: 20,
+                                color: color.AppColor.secondPageIconColor,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                          InkWell(
+                                onTap: () {
+                                Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const DreamTeam()),
+                              );
+                            },
+                            child:Text(
+                                "Dream Team.",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: color.AppColor.secondPageIconColor),
+                              ),
+                             ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          width: 250,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              gradient: LinearGradient(
+                                  colors: [
+                                  color.AppColor
+                                      .secondPageContainerGradient1stColor,
+                                  color.AppColor
+                                      .secondPageContainerGradient2ndColor
+                                  ],
+                                  begin: Alignment.bottomLeft,
+                                  end: Alignment.topRight,
+                              )),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                Icons.email,
                                 size: 20,
                                 color: color.AppColor.secondPageIconColor,
                               ),
@@ -127,14 +229,14 @@ class _VideoInfoState extends State<VideoInfo> {
                                 width: 5,
                               ),
                               Text(
-                                "68 min",
+                                "Webinar + Emails",
                                 style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 14,
                                     color: color.AppColor.secondPageIconColor),
                               )
                             ],
                           ),
-                        ),
+                        ),//Alchamy offer
                         SizedBox(
                           width: 20,
                         ),
@@ -152,12 +254,13 @@ class _VideoInfoState extends State<VideoInfo> {
                                 ],
                                 begin: Alignment.bottomLeft,
                                 end: Alignment.topRight,
-                              )),
+                              ),
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.handyman_outlined,
+                                Icon(
+                                Icons.bolt,
                                 size: 20,
                                 color: color.AppColor.secondPageIconColor,
                               ),
@@ -165,29 +268,30 @@ class _VideoInfoState extends State<VideoInfo> {
                                 width: 5,
                               ),
                               Text(
-                                "Grow You're Coding Skills.",
+                                "Tech Funnel.",
                                 style: TextStyle(
                                     fontSize: 14,
                                     color: color.AppColor.secondPageIconColor),
-                              )
-                            ],
+                                ),
+                              ],
+                            ),
                           ),
-                        )
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              )):Container(
-            child: Column(
-              children: [
-                Container(
-                  height: 100,
+                  ],
+                 ),
+                ):Container(
+                  child: Column(
+                  children: [
+                  Container(
+                  height:  100,
                   padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
                   child: Row(
-                    children: [
+                      children: [
                       InkWell(
                         onTap: (){
-                           debugPrint("tapped");
+                          Navigator.pop(context);
                         },
                         child: Icon(Icons.arrow_back_ios,size: 20,color:color.AppColor.secondPageIconColor,),
                       ),
@@ -195,7 +299,7 @@ class _VideoInfoState extends State<VideoInfo> {
                       Icon(Icons.info_outline,
                         size: 20,
                         color: color.AppColor.secondPageTopIconColor,
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -208,20 +312,20 @@ class _VideoInfoState extends State<VideoInfo> {
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(70))),
-            child: Column(
-              children: [
+                child: Column(
+                children: [
                 SizedBox(
                   height: 30,
                 ),
                 Row(
-                  children: [
+                    children: [
                     SizedBox(
                       width: 30,
                     ),
                     Text(
-                      "Topic 1: Intro To Coding",
+                      "Welcome To Course Alchemy",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: color.AppColor.circuitsColor),
                     ),
@@ -234,7 +338,7 @@ class _VideoInfoState extends State<VideoInfo> {
                           width: 10,
                         ),
                         Text(
-                          "3 sets",
+                          "4 Topics",
                           style: TextStyle(
                             fontSize: 15,
                             color: color.AppColor.setsColor,
@@ -245,12 +349,9 @@ class _VideoInfoState extends State<VideoInfo> {
                     SizedBox(
                       width: 20,
                     ),
-
-
                   ],
-
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 40),
                 Expanded(child: _listview()),
               ],
             ),
@@ -265,21 +366,22 @@ class _VideoInfoState extends State<VideoInfo> {
     width: MediaQuery.of(context).size.width,
     color: color.AppColor.gradientSecond,
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-     children: [
-       FlatButton(onPressed: ()async{
-
-       }, child: Icon(Icons.fast_rewind,
-       size: 36,
-       color: Colors.white,
-       )
+       mainAxisAlignment: MainAxisAlignment.center,
+       children: [
+       TextButton(
+         onPressed: ()async{
+       },
+         child: Icon(Icons.fast_rewind,
+         size: 36,
+         color: Colors.white,
        ),
-       FlatButton(onPressed: ()async{
+       ),
+       TextButton(onPressed: ()async{
        if(_isPlaying){
-         setState(() {
+            setState(() {
             _isPlaying=false;
          });
-         _controller.pause();
+            _controller.pause();
        }else{
          setState(() {
            _isPlaying=true;
@@ -287,17 +389,19 @@ class _VideoInfoState extends State<VideoInfo> {
          _controller.play();
        }
 
-       }, child: Icon(_isPlaying?Icons.pause:Icons.play_arrow,
-         size: 36,
-         color: Colors.white,
-       )
+       },
+           child: Icon(_isPlaying?Icons.pause:Icons.play_arrow,
+           size: 36,
+           color: Colors.white,
        ),
-       FlatButton(onPressed: ()async{
+       ),
+       TextButton(onPressed: ()async{
 
-       }, child: Icon(Icons.fast_forward,
-         size: 36,
-         color: Colors.white,
-       )
+       },
+           child: Icon(Icons.fast_forward,
+           size: 36,
+           color: Colors.white,
+        ),
        ),
      ],
     ),
@@ -312,89 +416,102 @@ class _VideoInfoState extends State<VideoInfo> {
     );
   }else{
     return AspectRatio(
-       aspectRatio: 16/9,
+          aspectRatio: 16/9,
           child: Center( child: Text("Preparing.....",style: TextStyle(fontSize: 20,color: Colors.white60),)));
   }
   }
-  void _onControllerUpdate()async{
-    final controller = _controller;
-    if(controller==null){
+   void _onControllerUpdate()async{
+     final controller = _controller;
+     if(controller==null){
       debugPrint("controller is null");
       return;
-    }
-    if(!controller.value.isInitialized){
+     }
+     if(!controller.value.isInitialized){
       debugPrint("Controller Can not be initialized");
       return;
+     }
+     final playing = controller.value.isPlaying;
+     _isPlaying=playing;
     }
-    final playing = controller.value.isPlaying;
-    _isPlaying=playing;
-  }
-  _initializeVideo(int index) async {
-    final controller = VideoPlayerController.network(
+    _initializeVideo(int index) async {
+        final controller = VideoPlayerController.network(
         videoInfo[index]["videoUrl"]);
         _controller = controller;
 
-    setState(() {});
+        setState(() {
+
+        });
         controller..initialize().then((_){
         controller.addListener(_onControllerUpdate);
         controller.play();
         setState(() {});
-        });
+        }
+        );
       }
       _onTapVideo(int index){
       _initializeVideo(index);
       }
-  _listview(){
-    return ListView.builder(
+      _listview(){
+      return ListView.builder(
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 8),
         itemCount: videoInfo.length,
         itemBuilder: (_, int index){
-          return GestureDetector(
+
+            return GestureDetector(
             onTap: (){
-             _onTapVideo(index);
+              _onTapVideo(index);
               debugPrint(index.toString());
               setState(() {
                 if(_playArea==false){
                    _playArea=true;
                 }
-              });
-            },
-            child: _buildcard(index),
+               }
+              );
+             },
+             child: _buildcard(index),
+             );
+            }
           );
-        });
-  }
-  _buildcard(int index){
-    return Container(
-      height: 135,
-      child: Column(
+        }
+        _buildcard(int index){
+        return Container(
+        height: 135,
+        child: Column(
         children: [
-          Row(
+            Row(
             children: [
-              Container(
+                Container(
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
                       image: AssetImage(
                         videoInfo[index]["thumbnail"],
                       ),
                       fit:BoxFit.cover,
-                    )
+                      ),
+                   ),
                 ),
-              ),
-              SizedBox(width: 10,),
-              Column(
+                SizedBox(width: 10),
+                Column(
                 mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                    Text(
                     videoInfo[index]["title"],
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold
-
                     ),
                   ),
+                  DropdownButton<String>(value: selectedItem, items: items.map((item) =>
+                      DropdownMenuItem<String>(value: item, child: Text(item, style: TextStyle(fontSize: 15),
+                      ),
+                      ),
+                      ).toList(),
+                      onChanged: (item) => setState(() => selectedItem = (item),
+                      ),
+                      ),
                   SizedBox(height: 10,),
                   Padding(
                     padding: EdgeInsets.only(top: 3),
@@ -406,50 +523,30 @@ class _VideoInfoState extends State<VideoInfo> {
                     ),
                   )
                 ],
-              )
+              ),
             ],
           ),
           SizedBox(height: 18,),
 
-          Row(
-            children: [
-              Container(
-                width: 80,
-                height: 20,
-                decoration: BoxDecoration(
-                  color: Color(0xFFeaeefc),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Text(
-                  "Topic 1",style: TextStyle(
-                  color: Color(0xFF839fed),
-                ),
-                ),
-              ),
               Row(
                 children: [
                   for(int i=0; i<70; i++)
                     i.isEven?Container(
-                      width: 3,
+                      width: 6,
                       height: 1,
                       decoration: BoxDecoration(
                           color: Color(0xFF839fed),
                           borderRadius: BorderRadius.circular(2)
                       ),
-                    ):Container(
+                     ):Container(
                       width: 3,
                       height: 1,
                       color: Colors.white,
                     ),
-
-                ],
-              )
-            ],
-          )
-        ],
-
-      ),
-    );
-
-  }
-}
+                 ],
+               ),
+             ],
+           ),
+         );
+      }
+   }

@@ -21,5 +21,7 @@ class AppColor{
   static Color circuitsColor = const Color(0xFF2f2f51);
   static Color yellow = const Color(0xff595959);
   static Color logocolor = const Color(0xffd8c898);
+  static Color caseStudiecolor1 = const Color(0xff76b5c5);
+  static Color caseStudiecolor2 = const Color(0xffd8c898);
 
 }

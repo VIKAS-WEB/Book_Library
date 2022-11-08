@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'configuration.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -7,15 +6,14 @@ class DrawerScreen extends StatefulWidget {
   @override
   State<DrawerScreen> createState() => _DrawerScreenState();
 }
-
 class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+      return Container(
       decoration: BoxDecoration(
-        color: primaryGreen,
-        gradient: LinearGradient(
-          colors: [
+         color: primaryGreen,
+         gradient: LinearGradient(
+            colors: [
             Color(0xff41786b),
             Color(0xff57bda5),
           ],
@@ -27,7 +25,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
-            children: [
+              children: [
               CircleAvatar(),
               SizedBox(width: 10,),
               Column(
@@ -61,9 +59,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               SizedBox(width: 10,),
               Container(width: 2,height: 20,color: Colors.white,),
               SizedBox(width: 10,),
-              Text('Log out',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
-
-
+              Text('Log out',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
             ],
           )
 

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Here Is What You Will Do",
+    "time": "1) What the RES Method is Skills and Experiences you have acquired in your life.",
+    "thumbnail": "assets/images/m1.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Resources And Tools",
+    "time": "1) Access the worksheet. 2) Download the lesson at a glance",
+    "thumbnail": "assets/images/m1.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets /videos/bee.mp4"
+  },
+  {
+    "title": "Take The Self-Assessment:",
+    "time":  "1) Is your current offer priced to scale? 2) Do you know what your current average hourly rate is and what your desired hourly rate is?",
+    "thumbnail": "assets/images/m1.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Take Action Now:",
+    "time": "2) Here’s a quick link to all the worksheets you need to complete for this lesson.",
+    "thumbnail": "assets/images/m1.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  }
+
+]

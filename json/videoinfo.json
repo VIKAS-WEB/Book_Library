@@ -1,26 +1,26 @@
 [
   {
-    "title": "Why We Use Coding.",
+    "title": "Content1.",
     "time": "15:00 minutes",
-    "thumbnail": "assets/images/14.png",
+    "thumbnail": "assets/images/ca.png",
     "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
   },
   {
-    "title": "Robotics",
+    "title": "Content2",
     "time": "30 minutes",
-    "thumbnail": "assets/images/robots.webp",
+    "thumbnail": "assets/images/ca2.png",
     "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
   },
   {
-    "title": "Intro To Java",
+    "title": "Content3",
     "time": "15 minutes",
-    "thumbnail": "assets/images/java.jpg",
+    "thumbnail": "assets/images/ca3.png",
     "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
   },
   {
-    "title": "Artificial Intelligence",
+    "title": "Content4",
     "time": "1:02hr",
-    "thumbnail": "assets/images/AI.png",
+    "thumbnail": "assets/images/ca4.png",
     "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
   }
 

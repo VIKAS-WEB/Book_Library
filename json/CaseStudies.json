@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Heather Chesky.",
+    "time": "HEATHER CHESKY Case Study 6/10/19...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss1.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Azyabeth Garcia",
+    "time": "AZYABETH GARCIA Case Study 4/30/19....",
+    "thumbnail": "assets/images/CaseStudiesImages/ss2.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
+  },
+  {
+    "title": "Chelsea Guarriello",
+    "time": "CHELSEA GUARRIELLO Case Study 4/16/19 Drop-shipping Tasty...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss3.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Cindy Goodson",
+    "time": "Cindy Goodson’s Case Study Interview 3/5/19 Course Topic: ...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss4.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Eugene Bush",
+    "time": "Eugene Bush’s Case Study Interview2/12/19 Course Topic: Producers C...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss5.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Alysha Price",
+    "time": "Alysha Price's Case Study Course Topic: Cooperativ...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss6.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Michelle Keinan",
+    "time": "Michelle Keinan.I'm here with Michelle. Super, super excited...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss7.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "Jessica Edwards",
+    "time": "Jessica Edwards Case Study Interview Jessica’s MVC Scoreca...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss8.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  },
+  {
+    "title": "James Travis Turner",
+    "time": "James Travis Turner's Case Study Interview James’s MVC Sco...",
+    "thumbnail": "assets/images/CaseStudiesImages/ss9.png",
+    "videoUrl": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
+  }
+]
